@@ -1,7 +1,7 @@
 # Explicit synthesis source list. Keep framework and vendor code unchanged.
 set_global_assignment -name QIP_FILE sys/sys.qip
 set_global_assignment -name QIP_FILE rtl/pll.qip
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/analog_hsize.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/crt_adjust.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/shuuz_analog_adjust.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/shuuz_clocks.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/shuuz_core.sv

@@ -86,7 +86,7 @@ selects.
 | Aspect ratio | Original, Full Screen, or the two custom ratios from `MiSTer.ini` |
 | Orientation | Original or Flip |
 | Scale | Normal, V-Integer, HV-Integer, Narrower HV-Integer |
-| Analog alignment | CRT H-Size and H-Position (stretch and move the picture inside the line), Analog VGA H-Shift and V-Shift (move the sync). Analog output only |
+| CRT Adjust | Off or On; while On, CRT H-Size and H-Position (stretch and move the picture inside the line) and CRT V-Shift (move the picture up or down by whole lines). For analog CRTs; not available while the scandoubler is forced. Off leaves the picture untouched |
 | Trackball speed | 0.25x to 4x; 1x is the default |
 | Trackball X, Trackball Y | Invert either axis |
 | Service | The board's self-test switch |
@@ -233,7 +233,7 @@ where each part came from.
 |-----------|---------|
 | `Arcade-Shuuz.sv`, `rtl/` (this core and the modules it adapts) | GPL-3.0-or-later |
 | `rtl/lib/fx68k/`: fx68k 68000 core, Jorge Cwik | GPL-3.0 |
-| `rtl/video/analog_hsize.sv`: Umberto Parisi (rmonic79) | GPL-3.0-or-later |
+| `rtl/video/crt_adjust.sv`: Umberto Parisi (rmonic79) | GPL-3.0-or-later |
 | `sys/`: MiSTer framework, Alexey Melnikov and contributors | GPL-2.0-or-later / GPL-3.0-or-later, as marked in each file |
 
 ---
@@ -246,8 +246,8 @@ where each part came from.
 - **Jorge Cwik**: the fx68k 68000 core.
 - **Alexey Melnikov (Sorgelig)** and the MiSTer-devel community: the MiSTer
   framework.
-- **Umberto Parisi (rmonic79)**: `analog_hsize.sv`, from
-  [Arcade-Raiden_MiSTer](https://github.com/rmonic79/Arcade-Raiden_MiSTer).
+- **Umberto Parisi (rmonic79)**: `crt_adjust.sv`, from
+  [MiSTer-CRT-Adjust](https://github.com/rmonic79/MiSTer-CRT-Adjust).
 - **RetroShrimp**: the trackball and controls modules (from the
   [Rampart](https://github.com/MiSTer-devel/Arcade-Rampart_MiSTer) MiSTer
   core) and the MSM6295 model (from the

@@ -8,11 +8,16 @@ The MiSTer framework (the `sys` folder) is copied without modification from
 the Off the Wall MiSTer core, with its original notices. Framework sources
 include work by Alexey Melnikov and their respective credited authors.
 
-The integration shell, PLL, SDRAM controller, download loader, ROM memory,
-program ROM and analogue adjustment derive from the Off the Wall MiSTer core
-and, through it, from the Relief Pitcher, Rampart, Batman and Skull &
-Crossbones MiSTer cores, all GPL-3.0-or-later. Their copyright notices are
-retained. The analogue horizontal-size module credits Umberto Parisi.
+The integration shell, PLL, SDRAM controller, download loader, ROM memory
+and program ROM derive from the Off the Wall MiSTer core and, through it,
+from the Relief Pitcher, Rampart, Batman and Skull & Crossbones MiSTer
+cores, all GPL-3.0-or-later. Their copyright notices are retained.
+
+The CRT Adjust stage is `crt_adjust.sv` from rmonic79's MiSTer-CRT-Adjust
+(upstream commit c682de9), GPL-3.0-or-later, (c) Umberto Parisi (rmonic79),
+with the adaptations listed in its header. The glue around it,
+`shuuz_analog_adjust.sv`, comes from the Blasteroids MiSTer core
+(Copyright (C) 2026 RetroShrimp), GPL-3.0-or-later.
 
 The video section (VAD, video RAM schedule, playfield, motion objects, line
 buffer, colour RAM, DAC, graphics readers), the 68000 wrapper, wait-state
