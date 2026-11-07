@@ -28,7 +28,9 @@ Both versions run on the same bitstream. Only the two program ROMs differ.
 
 ## Installing
 
-1. Copy `releases/Shuuz_<date>.rbf` to `/media/fat/_Arcade/cores/`.
+1. Copy `releases/Arcade-Shuuz_<date>.rbf` to `/media/fat/_Arcade/cores/`
+   as `Shuuz_<date>.rbf`, without the `Arcade-` prefix. The MRAs name the
+   core `Shuuz`; the MiSTer update scripts drop the prefix the same way.
 2. Copy `releases/Shuuz.mra` to `/media/fat/_Arcade/`. For version 7.1, also
    copy the `releases/_alternatives/_Shuuz` folder to
    `/media/fat/_Arcade/_alternatives/`.
@@ -188,7 +190,7 @@ You need Quartus Prime **17.0.2** (Lite or Standard), as for all MiSTer cores.
 
 1. Open `Shuuz.qpf`, or run `quartus_sh --flow compile Shuuz` in this folder.
 2. The bitstream is `output_files/Shuuz.rbf`. For a release, copy it to
-   `releases/Shuuz_YYYYMMDD.rbf`.
+   `releases/Arcade-Shuuz_YYYYMMDD.rbf`.
 
 The framework writes the build date into the bitstream, so a build made on
 another day differs from the release in those bytes only.
